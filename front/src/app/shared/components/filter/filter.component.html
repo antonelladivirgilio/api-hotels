@@ -1,0 +1,39 @@
+<div class="container-white">
+    <h1 (click)="filtersExpanded = !filtersExpanded" class="icon-pointer">Filtros</h1>
+</div>
+<div class="container-white" [ngClass]="{ 'd-none': filtersExpanded }">
+    <h2 (click)="searchBarExpanded = !searchBarExpanded" class="icon-pointer d-flex justify-content-start align-items-center">
+        <span class="icon icon-search p-2"></span>
+        <span class="p-2">Nombre del hotel</span>
+        <span class="icon icon-arrow ml-auto p-2" [ngClass]="{ 'animation-rotation': !searchBarExpanded }"></span>
+    </h2>
+
+    <div [ngClass]="{ 'd-none': searchBarExpanded }">
+        <div class="d-flex justify-content-start align-items-center">
+            <input type="text" class="p-2" />
+            <button class="btn ml-auto p-2">Aceptar</button>
+        </div>
+    </div>
+</div>
+<div class="container-white " [ngClass]="{ 'd-none': filtersExpanded }">
+
+    <h2 (click)="ratingExpanded = !ratingExpanded" class="icon-pointer d-flex justify-content-start align-items-center">
+        <span class="icon icon-star-blue p-2"></span>
+        <span class="p-2">Estrellas</span>
+        <span class="icon icon-arrow ml-auto p-2" [ngClass]="{ 'animation-rotation': !ratingExpanded }"></span>
+    </h2>
+
+    <div [ngClass]="{ 'd-none': ratingExpanded }">
+        <ul>
+            <li>
+                <input type="checkbox" class="checkbox" />
+                <label for="">Todas las Estrellas</label>
+            </li>
+            <li *ngFor="let star of stars | reverse">
+                <input type="checkbox" class="checkbox" />
+                <label for="" class="text-hide"></label>
+                <app-rating [stars]="star"></app-rating>
+            </li>
+        </ul>
+    </div>
+</div>

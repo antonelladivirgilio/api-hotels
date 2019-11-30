@@ -1,0 +1,48 @@
+/* ===============================================================
+   ESTILOS DE FILTER COMPONENT
+   =============================================================== */
+
+@import "../../../../styles.scss";
+
+.icon-pointer {
+    /* Estilos */ 
+    cursor: pointer;
+}
+
+.checkbox {
+    margin: 0 10px 0 0;
+}
+
+.container-white {
+
+    /* Estilos */ 
+    background-color: $color-white;
+    margin: 0 0 10px 0;
+    padding: 10px 15px;
+
+    &.element-hidden {
+        display: none;
+    }
+}
+
+/* Estilos iconos
+   =============================================================== */
+
+.icon {
+    @extend %bgContain;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+}
+
+.icon-star-blue {
+    background-image: $star-blue;
+}
+
+.icon-search {
+    background-image: $search;
+}
+
+.icon-arrow {
+    background-image: $arrow;
+}

@@ -1,0 +1,99 @@
+/* ===============================================================
+   ESTILOS DE AMENITIES
+   =============================================================== */
+
+@import "../../../../styles.scss";
+
+.icon-amenitie {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 0 10px 0 0;
+  background-color: $color-amenitie-lighblue;
+  border-radius: 6px;
+}
+
+.bathrobes {
+  @include bgImageProp(60%, 50%);
+  background-image: $bathrobes;
+}
+
+.bathtub {
+  @include bgImageProp(60%, 50%);
+  background-image: $bathtub;
+}
+
+.beach {
+  @include bgImageProp(60%, 50%);
+  background-image: $beach;
+}
+
+.beach-pool-facilities {
+  @include bgImageProp(60%, 50%);
+  background-image: $beach-pool-facilities;
+}
+
+.business-center {
+  @include bgImageProp(60%, 50%);
+  background-image: $business-center;
+}
+
+.children-club {
+  @include bgImageProp(60%, 50%);
+  background-image: $children-club;
+}
+
+.coffe-maker {
+  @include bgImageProp(60%, 50%);
+  background-image: $coffe-maker;
+}
+
+.deep-soaking-bathtub {
+  @include bgImageProp(60%, 50%);
+  background-image: $deep-soaking-bathtub;
+}
+
+.fitness-center {
+  @include bgImageProp(60%, 50%);
+  background-image: $fitness-center;
+}
+
+.garden {
+  @include bgImageProp(60%, 50%);
+  background-image: $garden;
+}
+
+.kitchen-facilities {
+  @include bgImageProp(60%, 50%);
+  background-image: $kitchen-facilities;
+}
+
+.newspaper {
+  @include bgImageProp(60%, 50%);
+  background-image: $newspaper;
+}
+
+.nightclub {
+  @include bgImageProp(60%, 50%);
+  background-image: $nightclub;
+}
+
+.restaurant {
+  @include bgImageProp(60%, 50%);
+  background-image: $restaurant;
+}
+
+.safety-box {
+  @include bgImageProp(60%, 50%);
+  background-image: $safety-box;
+}
+
+.separate-bredroom {
+  @include bgImageProp(60%, 50%);
+  background-image: $separate-bredroom;
+}
+
+.sheets {
+  @include bgImageProp(60%, 50%);
+  background-image: $sheets;
+}

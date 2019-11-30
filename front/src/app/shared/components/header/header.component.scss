@@ -1,0 +1,22 @@
+/* ===============================================================
+   HEADER SASS
+   =============================================================== */
+
+@import "../../../../styles";
+
+.navbar-brand {
+  @media (max-width: $break-small) {
+    width: 125px;
+  }
+}
+.font-serif {
+  font-family: "Montserrat", sans-serif;
+
+  @include fontColorSize(lighten($color-white, 0.4), 80px);
+}
+
+.font-handwriting {
+  font-family: "Mrs Sheppards", cursive;
+
+  @include fontColorSize(lighten($color-white, 0.4), 60px);
+}

@@ -1,0 +1,23 @@
+/* ===============================================================
+   ESTILOS DE PAGE-HOTELS COMPONENT
+   =============================================================== */
+
+@import "../../../styles.scss";
+
+.container-body {
+  /* Estilos */
+  padding: 20px;
+}
+
+.hotels-container {
+  @include flexDirection(row);
+  flex-wrap: wrap;
+}
+
+.navbar {
+  background: $home;
+  min-height: 80vh;
+  justify-content: center;
+
+  @include bgCover(50% 80%);
+}

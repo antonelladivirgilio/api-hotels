@@ -1,0 +1,38 @@
+<div
+  *ngFor="let hotel of hotels"
+  class="col-lg-4 col-md-6 col-sm-12 hotel-container"
+>
+  <div class="card-container">
+    <div class="card-image-container flex-grow-1">
+      <div
+        *ngIf="hotel.image"
+        class="image"
+        [ngStyle]="{
+          'background-image': 'url(../../../assets/hotels/' + hotel.image + ')'
+        }"
+      ></div>
+    </div>
+    <div class="card-description d-flex justify-content-between flex-grow-1">
+      <div class="d-flex flex-column">
+        <h5 class="card-title">
+          {{ hotel.name | titlecase }}
+        </h5>
+        <div class="star d-flex justify-content-start">
+          <app-rating [stars]="hotel.stars"></app-rating>
+        </div>
+      </div>
+      <div>
+        <div class="amenitie-container d-flex justify-content-start">
+          <app-amenitie
+            *ngFor="let amenitie of hotel.amenities"
+            [amenitieType]="amenitie"
+          ></app-amenitie>
+        </div>
+        <div class="price-container">
+          <span class="price">$ {{ hotel.price }}</span>
+          <span class="price-description"> / Night</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,208 @@
+/* ===============================================================
+   MAIN SASS
+   =============================================================== */
+
+/* Colores
+   =============================================================== */
+
+// Body BG
+$color-lightblue: #f4f4f4;
+
+// Header colors
+$color-blue: #154482;
+
+// Botones
+$color-blue-btn-bg: #002c77;
+
+// Estrellas
+$color-yellow-start: #fdba12;
+
+// Color de fuentes en filtros
+$color-blue-font: #7e92c6;
+
+// Color de fuentes para precios
+$color-orange: #df6800;
+
+// Aplicado en:
+// fuentes,
+// iconos de amenities,
+// descripcion de filtros y
+// descripcion de precios
+$color-gray: #444444;
+
+$color-black: #000000;
+$color-white: #ffffff;
+
+$color-amenitie-lighblue: #edf3fa;
+
+/* Icons
+   =============================================================== */
+
+// Path iconos in components
+$path-logo: "../../../../assets/icons";
+
+$logo: url("#{$path-logo}/logo.svg");
+$star-blue: url("#{$path-logo}/star-blue.svg");
+$arrow: url("#{$path-logo}/arrow.svg");
+$search: url("#{$path-logo}/search.svg");
+
+// Path iconos amenities
+$path-shared-filters: "../../../assets/icons/filters";
+
+// Imagenes SVG
+$star: url("#{$path-shared-filters}/star.svg");
+
+// Path iconos amenities
+$path-shared-amenities: "../../../../assets/icons/amenities";
+
+// Path home image
+$path-home: "../../../assets/home";
+
+// Home image
+$home: url("#{$path-home}/home.jpg");
+
+// Imagenes SVG
+$bathrobes: url("#{$path-shared-amenities}/bathrobes.svg");
+$bathtub: url("#{$path-shared-amenities}/bathtub.svg");
+$beach: url("#{$path-shared-amenities}/beach.svg");
+$beach-pool-facilities: url("#{$path-shared-amenities}/beach-pool-facilities.svg");
+$business-center: url("#{$path-shared-amenities}/business-center.svg");
+$children-club: url("#{$path-shared-amenities}/children-club.svg");
+$coffe-maker: url("#{$path-shared-amenities}/coffe-maker.svg");
+$deep-soaking-bathtub: url("#{$path-shared-amenities}/deep-soaking-bathtub.svg");
+$fitness-center: url("#{$path-shared-amenities}/fitness-center.svg");
+$garden: url("#{$path-shared-amenities}/garden.svg");
+$kitchen-facilities: url("#{$path-shared-amenities}/kitchen-facilities.svg");
+$newspaper: url("#{$path-shared-amenities}/newspaper.svg");
+$nightclub: url("#{$path-shared-amenities}/nightclub.svg");
+$restaurant: url("#{$path-shared-amenities}/restaurant.svg");
+$safety-box: url("#{$path-shared-amenities}/safety-box.svg");
+$separate-bredroom: url("#{$path-shared-amenities}/separate-bredroom.svg");
+$sheets: url("#{$path-shared-amenities}/sheets.svg");
+
+// Path no image
+$path-no-image: "../../../../assets/icons";
+
+// Imagenes SVG
+$no-image: url("#{$path-no-image}/no-image.svg");
+
+/* Placeholders 
+   =============================================================== */
+
+%bgContain {
+  /* Propiedades de background */
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+
+  /* Otras */
+  height: 100%;
+}
+
+%bgCover {
+  /* Propiedades de background */
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+
+  /* Otras */
+  height: 100%;
+}
+
+/* Mixins 
+   =============================================================== */
+@mixin flexDirection($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin justifyContent($direction) {
+  justify-content: $direction;
+}
+
+@mixin bgCover($position) {
+  /* Propiedades de background */
+  background-size: cover;
+  background-position: $position;
+  background-repeat: no-repeat;
+
+  /* Otras */
+  height: 100%;
+}
+
+@mixin bgImageProp($size, $position) {
+  /* Propiedades de background */
+  background-size: $size;
+  background-position: $position;
+  background-repeat: no-repeat;
+
+  /* Otras */
+  min-height: 100%;
+}
+
+@mixin fontColorSize($color, $size) {
+  font-size: $size;
+  color: $color;
+}
+
+/* Grid 
+   =============================================================== */
+
+$break-small: 768px;
+
+/* Estilos generales
+   =============================================================== */
+
+ul {
+  list-style: none;
+}
+
+ul,
+li,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 18px;
+  margin: 0;
+  color: $color-gray;
+}
+
+h2 {
+  font-size: 16px;
+  margin: 0;
+  color: $color-blue-font;
+}
+
+.element-hidden {
+  display: none;
+}
+
+.btn {
+  background-color: $color-blue-btn-bg;
+  color: $color-white;
+  border-radius: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/* Animaciones
+   =============================================================== */
+
+.animation-rotation-90 {
+  //-webkit-animation: rotation 0.5s  linear;
+  //-moz-animation: rotation 0.5s  linear;
+  //-o-animation: rotation 0.5s  linear;
+  //animation: rotation 0.5s  linear;
+  transform: rotateZ(180deg);
+  transition: all 0.4s ease;
+}
+
+.animation-rotation--90 {
+  transform: rotateZ(-90deg);
+  transition: all 0.4s ease;
+}
